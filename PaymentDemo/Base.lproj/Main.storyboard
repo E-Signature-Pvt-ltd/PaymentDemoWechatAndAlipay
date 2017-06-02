@@ -23,22 +23,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R1A-oP-cjl">
-                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="golder$" translatesAutoresizingMaskIntoConstraints="NO" id="71U-UY-2J7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </imageView>
+                                    <view alpha="0.55000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ne3-ol-7kx">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PAYMENT INTEGRATION DEMO " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMZ-Nh-sFN">
                                         <rect key="frame" x="20" y="30" width="335" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.39521897007042256" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eSignature Pvt Ltd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ua-V1-We3">
                                         <rect key="frame" x="20" y="56" width="335" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.39521897007042256" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Dpd Ghimire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vca-jn-r6k">
                                         <rect key="frame" x="215.5" y="623" width="151.5" height="16"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39521897007042256" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -76,23 +87,31 @@
                                 <color key="backgroundColor" white="1" alpha="0.69616527288732399" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="s0t-Vf-Ii8" firstAttribute="centerX" secondItem="R1A-oP-cjl" secondAttribute="centerX" id="0Wz-Vc-xqu"/>
-                                    <constraint firstItem="s0t-Vf-Ii8" firstAttribute="centerY" secondItem="R1A-oP-cjl" secondAttribute="centerY" id="M80-dO-FbQ"/>
+                                    <constraint firstItem="71U-UY-2J7" firstAttribute="leading" secondItem="R1A-oP-cjl" secondAttribute="leading" id="4DY-xN-OqY"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ne3-ol-7kx" secondAttribute="trailing" id="8hI-0w-Mpw"/>
+                                    <constraint firstItem="71U-UY-2J7" firstAttribute="top" secondItem="R1A-oP-cjl" secondAttribute="top" id="EJm-Ho-qpR"/>
+                                    <constraint firstItem="s0t-Vf-Ii8" firstAttribute="centerY" secondItem="R1A-oP-cjl" secondAttribute="centerY" constant="-10" id="M80-dO-FbQ"/>
                                     <constraint firstItem="fMZ-Nh-sFN" firstAttribute="top" secondItem="R1A-oP-cjl" secondAttribute="top" constant="30" id="Mn0-Il-yGP"/>
+                                    <constraint firstItem="Ne3-ol-7kx" firstAttribute="top" secondItem="R1A-oP-cjl" secondAttribute="top" id="O67-3f-FG5"/>
                                     <constraint firstItem="2Ua-V1-We3" firstAttribute="centerX" secondItem="fMZ-Nh-sFN" secondAttribute="centerX" id="QJf-yi-iqc"/>
-                                    <constraint firstAttribute="bottom" secondItem="Vca-jn-r6k" secondAttribute="bottom" constant="8" id="hFy-yd-qdb"/>
+                                    <constraint firstAttribute="trailing" secondItem="71U-UY-2J7" secondAttribute="trailing" id="SPw-Nd-hRk"/>
+                                    <constraint firstItem="Ne3-ol-7kx" firstAttribute="leading" secondItem="R1A-oP-cjl" secondAttribute="leading" id="U6D-Rt-sff"/>
+                                    <constraint firstAttribute="bottom" secondItem="71U-UY-2J7" secondAttribute="bottom" id="fC1-BC-K4U"/>
+                                    <constraint firstAttribute="bottom" secondItem="Vca-jn-r6k" secondAttribute="bottom" constant="28" id="hFy-yd-qdb"/>
                                     <constraint firstAttribute="trailing" secondItem="fMZ-Nh-sFN" secondAttribute="trailing" constant="20" id="klg-Ve-8G4"/>
                                     <constraint firstItem="s0t-Vf-Ii8" firstAttribute="width" secondItem="R1A-oP-cjl" secondAttribute="width" multiplier="0.9" id="lcq-yc-2fx"/>
                                     <constraint firstItem="2Ua-V1-We3" firstAttribute="top" secondItem="fMZ-Nh-sFN" secondAttribute="bottom" constant="5" id="mIh-Gm-lGV"/>
                                     <constraint firstAttribute="trailing" secondItem="Vca-jn-r6k" secondAttribute="trailing" constant="8" id="rxj-6f-dr6"/>
                                     <constraint firstItem="fMZ-Nh-sFN" firstAttribute="leading" secondItem="R1A-oP-cjl" secondAttribute="leading" constant="20" id="s13-kc-Xbc"/>
                                     <constraint firstItem="2Ua-V1-We3" firstAttribute="width" secondItem="fMZ-Nh-sFN" secondAttribute="width" id="uKo-ey-Pqh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ne3-ol-7kx" secondAttribute="bottom" id="v5j-HE-eyD"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.44265603621537269" green="0.17047086709339404" blue="0.932176975388601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="R1A-oP-cjl" secondAttribute="bottom" id="F4j-uC-Tht"/>
-                            <constraint firstItem="R1A-oP-cjl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="iWS-JI-sYT"/>
+                            <constraint firstItem="R1A-oP-cjl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="iWS-JI-sYT"/>
                             <constraint firstAttribute="trailing" secondItem="R1A-oP-cjl" secondAttribute="trailing" id="kVX-go-fOP"/>
                             <constraint firstItem="R1A-oP-cjl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sq3-lc-GnE"/>
                         </constraints>
@@ -105,6 +124,7 @@
     </scenes>
     <resources>
         <image name="alipay" width="143" height="51"/>
+        <image name="golder$" width="640" height="1136"/>
         <image name="wechat" width="143" height="42"/>
     </resources>
 </document>
