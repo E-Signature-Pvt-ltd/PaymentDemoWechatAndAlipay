@@ -11,11 +11,21 @@ import SwiftyJSON
 
 class PaymentMethodsVc: UIViewController {
     
+    @IBOutlet weak var buttonContainer: UIView!
+    @IBOutlet var buttons: [UIButton]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //wechat pay deletate
         WeChatResponseHandller.shared.delegate = self
+        
+        self.buttonContainer.makeCircular(withBorderColor: .clear, andBorderWidth: 0, andCornorRadious: 8)
+        for button in buttons {
+            button.makeCircular(withBorderColor: .clear, andBorderWidth: 0, andCornorRadious: 5)
+        }
+        
     }
     
     //MARK:- Actions
@@ -209,3 +219,16 @@ extension PaymentMethodsVc:WeChatResponseHandllerDelegate {
 }
 
 
+
+extension UIView {
+    
+    ///This method makes view circular with cornor radious provided
+    
+    func makeCircular(withBorderColor borderColor:UIColor, andBorderWidth borderWidth:CGFloat, andCornorRadious cRadious: CGFloat){
+        self.layer.cornerRadius = cRadious
+        self.layer.borderColor = borderColor.cgColor
+        self.layer.borderWidth = borderWidth
+        self.layer.masksToBounds = true
+}
+
+}

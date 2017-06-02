@@ -116,6 +116,11 @@
                             <constraint firstItem="R1A-oP-cjl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sq3-lc-GnE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonContainer" destination="s0t-Vf-Ii8" id="Fzn-ts-NZA"/>
+                        <outletCollection property="buttons" destination="zD9-Ae-sXt" collectionClass="NSMutableArray" id="QE3-dC-bsG"/>
+                        <outletCollection property="buttons" destination="5VQ-qI-HX4" collectionClass="NSMutableArray" id="SJR-x4-zfH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
