@@ -33,18 +33,19 @@ extension AppDelegate {
         return WXApi.handleOpen(url, delegate: WeChatResponseHandller.shared)
     }
     
+    //- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString*, id> *)options
+
+   // - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         
         if url.host == "safepay" {
             
             AlipaySDK.defaultService().processAuthResult(url, standbyCallback: { (response) in
+               
                 print(response)
                 
                 let message = "Alipay response on app dlegate 1 "
-                //                if let response = resp?.errStr {
-                //                    message = "WechatPay Integraion is successful with error code \(response)"
-                //                }
                 let currentController = getCurrentViewController()
                 let alert = UIAlertController(title: "alipay", message: message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
@@ -53,12 +54,10 @@ extension AppDelegate {
             })
             
             AlipaySDK.defaultService().processAuth_V2Result(url, standbyCallback: { (response) in
+               
                 print(response)
                 
                 let message = "Alipay response on app dlegate 2 "
-                //                if let response = resp?.errStr {
-                //                    message = "WechatPay Integraion is successful with error code \(response)"
-                //                }
                 let currentController = getCurrentViewController()
                 let alert = UIAlertController(title: "alipay", message: message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
@@ -76,8 +75,37 @@ extension AppDelegate {
     // no equiv. notification. return NO if the application can't open for some reason
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         
+        if url.host == "safepay" {
+            
+            AlipaySDK.defaultService().processAuthResult(url, standbyCallback: { (response) in
+                
+                print(response)
+                
+                let message = "Alipay response on app dlegate 1 "
+                let currentController = getCurrentViewController()
+                let alert = UIAlertController(title: "alipay", message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                currentController?.present(alert, animated: true, completion: nil)
+                
+            })
+            
+            AlipaySDK.defaultService().processAuth_V2Result(url, standbyCallback: { (response) in
+                
+                print(response)
+                
+                let message = "Alipay response on app dlegate 2 "
+                let currentController = getCurrentViewController()
+                let alert = UIAlertController(title: "alipay", message: message, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: nil))
+                currentController?.present(alert, animated: true, completion: nil)
+                
+            })
+        }
+        
+
+        
         let isSuccess = WXApi.handleOpen(url, delegate: WeChatResponseHandller.shared)
-        return isSuccess
+        return true
     }
     
 }
